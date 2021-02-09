@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head.ejs')%>
+	</head>
+	<body>
+		<h1>Edit Log</h1>
+		<form action="/logs/<%=logObj._id%>?_method=PUT" method="POST">
+            Title: <input type="text" name="title" id="title" value="<%=logObj.title%>">
+            Entry: <textarea name="entry" id="entry" cols="30" rows="10" value="<%=logObj.entry%>"></textarea>
+            Ship is Broken? <input type="checkbox" name="shipIsBroken" id="shipIsBroken"
+            <%  if(logObj.shipIsBroken === true) {%>
+                checked
+            <%  }%>
+            > 
+               
+            <input type="submit" value="Submit Changes">
+        </form>
+        <nav><a href="/logs">BACK</a></nav>
+	</body>
+</html>
+
+<!-- form with action="/logs" and method="POST"
+input type text for a title
+input type textarea for an entry
+input type checkbox for shipIsBroken
+input type submit -->
