@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('./partials/head.ejs')%>
+	</head>
+	<body>
+		<h1>New Log</h1>
+		<form action="/logs" method="POST">
+            Title: <input type="text" name="title" id="title">
+            Entry: <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
+            Ship is Broken? <input type="checkbox" name="shipIsBroken" id="shipIsBroken">
+            <input type="submit" value="Create New Log">
+        </form>
+	</body>
+</html>
+
+<!-- form with action="/logs" and method="POST"
+input type text for a title
+input type textarea for an entry
+input type checkbox for shipIsBroken
+input type submit -->

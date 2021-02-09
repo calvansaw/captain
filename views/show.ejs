@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')%>
+</head>
+<body>
+    <div>
+        <h1>A specific log - Show page</h1>
+        <ul>
+            <li><%=logObj.title%></li>
+            <li><%=logObj.entry%></li>
+            <li><%=logObj.shipIsBroken%></li>
+            
+        </ul>
+    </div>
+    <nav><a href="/logs/new">Create New Logs</a></nav>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')%>
+</head>
+<body>
+    <div>
+        <h1>All Logs - Index page</h1>
+        <ul>
+
+            <%allLogs.forEach(log => {%>
+                <li><a href="/logs/<%=log._id%>"><%=log.title + ' ID:' + log._id %></a></li>
+            <%});%>
+
+        </ul>
+    </div>
+    <nav><a href="/logs/new">Create New Logs</a></nav>
+</body>
+</html>
