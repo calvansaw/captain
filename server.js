@@ -1,14 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Log = require('./models/logs');
-const mongoURI = process.env.DB_URI || 'mongodb://localhost27017/basiccrud';
+const mongoURI = process.env.DB_URI || 'mongodb://localhost27017/captain';
 
 /////////// connect to mongoose /////////
-mongoose.connect({ useNewUrlParser: true });
-mongoose.connect('mongodb://localhost:27017/captain', {
+mongoose.connect(mongoURI, {
 	useNewUrlParser: true,
 });
 mongoose.connection.once('open', () => {
